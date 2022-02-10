@@ -1,0 +1,30 @@
+{
+  "name": "microverseportofolio",
+  "version": "1.0.0",
+  "description": "This is a Microverse Portofolio Project of Module 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HamzaAnwar1998/MicroversePortofolio.git"
+  },
+  "keywords": [
+    "portofolio"
+  ],
+  "author": "Hamza Anwar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HamzaAnwar1998/MicroversePortofolio/issues"
+  },
+  "homepage": "https://github.com/HamzaAnwar1998/MicroversePortofolio#readme",
+  "dependencies": {
+    "get-google-fonts": "^1.2.2"
+  },
+  "devDependencies": {
+    "stylelint": "^14.4.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
+  }
+}
