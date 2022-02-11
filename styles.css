@@ -1,0 +1,228 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* wrapper */
+.wrapper{
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+/* header */
+.header{
+    width: 100%;
+    height: 72px;
+    background-color: #3E3C3C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Inter,sans-serif;
+    position: relative;
+}
+
+.header .bars{
+    color: #FFF;
+    display: none;
+}
+
+@media(max-width: 768px){
+    .header .bars{
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+}
+
+.header .title{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 95px;
+}
+
+@media(max-width: 768px){
+    .header .title{
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        margin-left: 0;
+    }
+}
+
+.header .title a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.header .links{
+    margin-right: 95px;
+}
+
+@media(max-width: 768px){
+    .header .links{
+        display: none;
+    }
+}
+
+.header .links a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0 15px;
+}
+
+/* hero section */
+.hero{
+    background-color:  #1C1A19;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+@media(max-width: 768px){
+    .hero{
+        flex-direction: column;
+        height: 850px;
+    }
+}
+
+.hero .leftside{
+    flex: 1;
+    display: flex;
+    padding-left: 30px;
+}
+
+@media(max-width: 768px){
+    .hero .leftside{
+        width: 100%;
+        padding: 15px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+
+/* social links */
+.hero .leftside .social-links{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 768px){
+    .hero .leftside .social-links{
+        flex-direction: row;
+        margin-top: 40px;
+        width: 100%;
+        justify-content: flex-start;
+    }   
+}
+
+.hero .leftside .social-links li{
+    margin: 12px 0;
+    list-style: none;
+}
+
+@media(max-width: 768px){
+    .hero .leftside .social-links li{
+        margin: 0 12px;
+    }   
+}
+
+.hero .leftside .social-links li a{
+    text-decoration: none;
+    color: #CFCFCF;
+}
+
+/* headline */
+.hero .leftside .headline{
+    display: flex;
+    flex-direction: column;
+    padding-left: 35px;
+}
+
+@media(max-width: 768px){
+    .hero .leftside .headline{
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+
+.hero .leftside .headline .headline-text{
+    color:  #F55800;
+    font-family: "Crete Round",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+}
+
+@media(max-width: 450px){
+    .hero .leftside .headline .headline-text{
+        font-size: 48px;
+    }
+}
+
+.hero .leftside .headline .title{
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: #FFF;
+    margin-top: 12px;
+}
+
+@media(max-width: 450px){
+    .hero .leftside .headline .title{
+        font-size: 22px;
+    }
+}
+
+.hero .leftside .headline p{
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #F4F5F7;
+    margin-top: 12px;
+    letter-spacing: 0.09em;
+    line-height: 30px;
+}
+
+@media(max-width: 450px){
+    .hero .leftside .headline p{
+        font-size: 16px;
+    }
+}
+
+.hero .rightside{
+    flex:1;
+    height: 600px;
+}
+
+.hero .rightside .background{
+    height: 100%;
+    width: 100%;
+    background-image: url("./images/Illustration-header.png");
+    background-size: cover;
+}
+
+@media(max-width: 768px){
+    .hero .rightside{
+        width: 100%;
+        margin-right: -300px;
+        margin-top: -200px;
+    }
+}
