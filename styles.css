@@ -17,8 +17,8 @@
     margin: 0 auto;
 }
 
-/* navbar */
-.navbar{
+/* header */
+.header{
     width: 100%;
     height: 72px;
     background-color: #3E3C3C;
@@ -29,13 +29,13 @@
     position: relative;
 }
 
-.navbar .bars{
+.header .bars{
     color: #FFF;
     display: none;
 }
 
 @media(max-width: 768px){
-    .navbar .bars{
+    .header .bars{
         display: block;
         position: absolute;
         top: 25px;
@@ -43,7 +43,7 @@
     }
 }
 
-.navbar .title{
+.header .title{
     font-size: 20px;
     font-style: normal;
     font-weight: bold;
@@ -51,7 +51,7 @@
 }
 
 @media(max-width: 768px){
-    .navbar .title{
+    .header .title{
         position: absolute;
         top: 25px;
         left: 20px;
@@ -59,22 +59,22 @@
     }
 }
 
-.navbar .title a{
+.header .title a{
     text-decoration: none;
     color: #FFF;
 }
 
-.navbar .links{
+.header .links{
     margin-right: 95px;
 }
 
 @media(max-width: 768px){
-    .navbar .links{
+    .header .links{
         display: none;
     }
 }
 
-.navbar .links a{
+.header .links a{
     color: #FFF;
     text-decoration: none;
     font-size: 15px;
@@ -87,60 +87,62 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
-    height: 650px;
+    height: auto;
 }
 
 @media(max-width: 768px){
     .hero{
         flex-direction: column;
-        padding: 20px;
-        height: auto;
+        height: 850px;
     }
 }
 
 .hero .leftside{
     flex: 1;
     display: flex;
+    padding-left: 30px;
 }
 
 @media(max-width: 768px){
     .hero .leftside{
         width: 100%;
         padding: 15px;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        margin-top: 30px;
     }
 }
 
 /* social links */
 .hero .leftside .social-links{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
     justify-content: center;
 }
 
 @media(max-width: 768px){
     .hero .leftside .social-links{
         flex-direction: row;
-        margin-top: 20px;
-    }
-    
+        margin-top: 40px;
+        width: 100%;
+        justify-content: flex-start;
+    }   
 }
 
-.hero .leftside .social-links span{
+.hero .leftside .social-links li{
     margin: 12px 0;
+    list-style: none;
 }
 
 @media(max-width: 768px){
-    .hero .leftside .social-links span{
+    .hero .leftside .social-links li{
         margin: 0 12px;
-    }
-    
+    }   
 }
 
-.hero .leftside .social-links span a{
+.hero .leftside .social-links li a{
     text-decoration: none;
     color: #CFCFCF;
 }
@@ -196,6 +198,7 @@
     color: #F4F5F7;
     margin-top: 12px;
     letter-spacing: 0.09em;
+    line-height: 30px;
 }
 
 @media(max-width: 450px){
@@ -206,37 +209,20 @@
 
 .hero .rightside{
     flex:1;
-    display: flex;
-    justify-content: flex-end;
+    height: 600px;
+}
+
+.hero .rightside .background{
+    height: 100%;
+    width: 100%;
+    background-image: url("./images/Illustration-header.png");
+    background-size: cover;
 }
 
 @media(max-width: 768px){
     .hero .rightside{
         width: 100%;
-        padding: 15px;
-        justify-content: center;
+        margin-right: -300px;
+        margin-top: -200px;
     }
-}
-
-.hero .rightside .code-img{
-    width: 512px;
-    height: auto;
-    margin-bottom: 30px;
-}
-
-@media(max-width: 768px){
-    .hero .rightside .code-img{
-        width: 412px;
-    }
-}
-
-@media(max-width: 7450px){
-    .hero .rightside .code-img{
-        width: 362px;
-    }
-}
-
-.hero .rightside .code-img img{
-    width: 100%;
-    height: 100%;
 }
