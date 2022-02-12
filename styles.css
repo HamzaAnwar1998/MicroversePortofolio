@@ -237,7 +237,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     /* width: 90%;
     margin: 30px 5% 0; */
 }
@@ -377,7 +377,6 @@
     display: flex;
     list-style: none;
     margin-top: 20px;
-    flex-wrap: wrap;
 }
 
 .grid-items.mp .grid-content .tech-stack .tech-stack-li{
@@ -411,8 +410,10 @@
     cursor: pointer;
 }
 
-.grid-items.mp .grid-content .see-projects:focus{
-    border: 2px solid #3699ff;
+.grid-items.mp .grid-content .see-projects:hover{
+    background-color: #fff5e1;
+    color: #FF6B00;
+    border: 1px solid #FF6B00;
 }
 
 .grid-items.pj{
@@ -498,8 +499,10 @@
     cursor: pointer;
 }
 
-.grid-items.pj .bg-img button:focus{
-    border: 2px solid #3699ff;
+.grid-items.pj .bg-img button:hover{
+    background-color: #fff5e1;
+    color: #FF6B00;
+    border: 1px solid #FF6B00;
 }
 
 /* mobile firt about me section */
@@ -559,9 +562,9 @@
     cursor: pointer;
 }
 
-.about-me .about-content .get-my-resume:focus{
+/* .about-me .about-content .get-my-resume:focus{
     color: #f0d1c0;
-}
+} */
 
 .about-me .about-content .get-my-resume:hover{
     border: 1px solid #FF6B00;
@@ -745,10 +748,14 @@
     align-items: center;
     justify-content: center;
     padding: 12px;
+    cursor: pointer;
 }
 
-.contact-box form .get-in-touch:focus{
-    border: 2px solid #3699ff;
+.contact-box form .get-in-touch:hover{
+    width: 133px;
+    background-color: #fff5e1;
+    color: #FF6B00;
+    border: 1px solid #FF6B00;
 }
 
 /* footer */
