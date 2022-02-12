@@ -5,6 +5,20 @@ A portofolio website (day 3 project 1 of microverse)
 - Html5
 - Css3
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+This project is dependent on some dev packages like Google Fonts. You need to install these packages in your local project environment to get the most of this project.
+
+### Install
+Run 'npm install' in your code terminal to install the packages.
+
+### Usage
+Install live server extension for your code editor to view the project or directly use the index.html file to open the project.
+
+
 # Authors
 
 👤 **Hamza Anwar**
