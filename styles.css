@@ -515,14 +515,14 @@
     padding: 25px; 
 }
 
-.about-me .about-content{
+.about-me .content-wrapper{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     border-bottom: 1px solid #FFF;
 }
 
-.about-me .about-content .about-heading{
+.about-me .content-wrapper .leftside .about-heading{
     font-family: "Crete Round",sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -532,7 +532,7 @@
     color: #FF6B00;
 }
 
-.about-me .about-content .about-text{
+.about-me .content-wrapper .leftside .about-text{
     font-family: Inter,sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -542,7 +542,7 @@
     margin: 24px 0;
 }
 
-.about-me .about-content .get-my-resume{
+.about-me .content-wrapper .leftside .get-my-resume{
     width: 161px;
     height: 48px;
     background: #FF6B00;
@@ -562,24 +562,52 @@
     cursor: pointer;
 }
 
-/* .about-me .about-content .get-my-resume:focus{
-    color: #f0d1c0;
-} */
-
-.about-me .about-content .get-my-resume:hover{
+.about-me .content-wrapper .leftside .get-my-resume:hover{
     border: 1px solid #FF6B00;
     color: #FF6B00;
     background-color: #fff5e1;
 }
 
-.about-me .about-content .about-bg-img{
-    width: 400px;
+.about-me .content-wrapper .rightside{
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about-me .content-wrapper .rightside .about-bg-img{
+    width: 492px;
     height: 260px;
     background-image: url("./images/illustration-about-me-mobile.png");
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 250px;
-    margin-top: -50px;
+    position: absolute;
+    right: -350px;
+    bottom: 70px;
+}
+
+@media(min-width: 992px){
+    .about-me .content-wrapper{
+        flex-direction: row;
+        padding-bottom: 150px;
+    }
+
+    .about-me .content-wrapper .leftside{
+        flex: 1;
+    }
+
+    .about-me .content-wrapper .rightside{
+        flex: 1;
+        height: auto;
+    }
+
+    .about-me .content-wrapper .rightside .about-bg-img{
+        position: static;
+        background-image: url('./images/illustration-about\ me@2x.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 /* skills-list */
@@ -670,6 +698,8 @@
     .contact-box{
         flex-direction: row;
         justify-content: space-around;
+        align-items: flex-start;
+        height: 450px;
     }
 }
 
@@ -685,8 +715,11 @@
 
 @media(min-width: 769px){
     .contact-box .text{
-        width: 350px;
-        margin: 20px 0;
+        flex: 1;
+        margin: 0 24px;
+        height: 100%;
+        font-size: 40px;
+        line-height: 52px;
     }
 }
 
@@ -701,8 +734,9 @@
 
 @media(min-width: 769px){
     .contact-box form{
-        width: 600px;
-        align-items: flex-start;
+        flex: 1;
+        height: 100%;
+        margin: 0 24px;
     }
 }
 
