@@ -408,6 +408,7 @@
     line-height: 24px;
     font-weight: 700;
     cursor: pointer;
+    transition: all 0.5s ease-in;
 }
 
 .grid-items.mp .grid-content .see-projects:hover{
@@ -420,6 +421,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+.grid-items.pj:hover{
+    transform: scale(1.1);
 }
 
 .grid-items.pj .bg-img{
@@ -497,6 +503,7 @@
     bottom: 0;
     left: 0;
     cursor: pointer;
+    transition: all 0.5s ease-in;
 }
 
 .grid-items.pj .bg-img button:hover{
@@ -560,6 +567,7 @@
     color: #FFF;
     border: hidden;
     cursor: pointer;
+    transition: all 0.5s ease-in;
 }
 
 .about-me .content-wrapper .leftside .get-my-resume:hover{
@@ -711,6 +719,11 @@
     line-height: 44px;
     text-align: center;
     color: #172B4D;
+    transition: all 0.5s ease-in;
+}
+
+.contact-box .text:hover{
+    transform: translate(8%);
 }
 
 @media(min-width: 769px){
@@ -783,7 +796,7 @@
 }
 
 .contact-box form .get-in-touch{
-    width: 131px;
+    width: 153px;
     height: 48px;
     margin: 24px 0;
     background: #FF6B00;
@@ -801,10 +814,10 @@
     justify-content: center;
     padding: 12px;
     cursor: pointer;
+    transition: color 0.5s ease-in, background-color 0.5s ease-in, width 0.5s ease-in;
 }
 
 .contact-box form .get-in-touch:hover{
-    width: 133px;
     background-color: #fff5e1;
     color: #FF6B00;
     border: 1px solid #FF6B00;
