@@ -1,5 +1,5 @@
-# MicroversePortofolio
-A portofolio website (day 3 project 1 of microverse)
+# MicroversePortfolio
+Portfolio Website
 
 # Built With
 - Html5
