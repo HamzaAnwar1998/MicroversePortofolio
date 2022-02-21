@@ -5,9 +5,9 @@ A portofolio website (day 3 project 1 of microverse)
 - Html5
 - Css3
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](http://hamzaanwar1998.github.io/MicroversePortofolio)
+[Portfolio Live Here](http://hamzaanwar1998.github.io/MicroversePortofolio)
 
 ## Getting Started
 
