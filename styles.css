@@ -61,7 +61,7 @@
     font-weight: bold;
     margin-left: 95px;
     animation-name: nameRotate;
-    animation-duration: 3s;
+    animation-duration: 5s;
 }
 
 @media(max-width: 768px){
