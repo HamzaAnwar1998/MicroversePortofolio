@@ -5,6 +5,7 @@ const bars = document.getElementById('bars');
 const cross = document.getElementById('cross');
 const links = document.getElementById('links');
 const wrapper = document.getElementById('wrapper');
+const navItems = document.querySelectorAll('.nav-items');
 
 // clicking on hamburger icon
 document.getElementById('bars').addEventListener('click',()=>{
@@ -47,4 +48,23 @@ cross.addEventListener('click',()=>{
     // overflow auto to wrapper
     wrapper.classList.remove('active');
     
+})
+
+navItems.forEach((navItem)=>{
+    navItem.addEventListener('click',()=>{
+         // deactivating header from full height to normal
+        header.classList.remove('active');
+
+        // showing the title
+        title.classList.remove('active');
+
+        // showing the bars
+        bars.classList.remove('active');
+
+        // hiding the cross
+        cross.classList.remove('active');
+
+        // overflow auto to wrapper
+        wrapper.classList.remove('active');
+    })
 })
