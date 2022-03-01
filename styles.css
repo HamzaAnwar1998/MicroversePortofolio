@@ -529,6 +529,7 @@
     justify-content: center;
     padding: 12px;
     position: relative;
+    overflow: hidden;
 }
 
 @media(max-width: 540px){
@@ -544,6 +545,7 @@
     font-size: 32px;
     line-height: 44px;
     color: #FFF;
+    margin-bottom: 5px;
 }
 
 .grid-items.pj .bg-img p{
@@ -553,12 +555,14 @@
     font-size: 16px;
     line-height: 24px;
     color: #FFF;
+    margin-bottom: 5px;
 }
 
 .grid-items.pj .bg-img ul{
     display: flex;
     list-style: none;
     margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .grid-items.pj .bg-img ul li{
