@@ -21,17 +21,18 @@
 </head>
 <body>
     <!-- wrapper -->
-    <main class="wrapper">
+    <main class="wrapper" id='wrapper'>
 
         <!-- header -->
-        <header class="header">
-            <div class="bars"><i class="fa-solid fa-bars fa-xl"></i></div>
-            <h6 class="title"><a href="#">Hamza Anwar</a></h6>
-            <nav class="links">               
-                <a href="#">Portofolio</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#"><i class="fa-solid fa-envelope fa-xl"></i></a>              
+        <header class="header" id='header'>
+            <div class="bars" id="bars"><i class="fa-solid fa-bars fa-xl"></i></div>
+            <div class="cross" id="cross"><i class="fa-solid fa-xmark fa-xl"></i></div>
+            <h6 class="title" id='title'><a href="#wrapper">Hamza Anwar</a></h6>
+            <nav class="links" id='links'>               
+                <span class="nav-items"><a href="#portfolio">Portfolio</a></span>
+                <span class="nav-items"><a href="#aboutMe">About</a></span>
+                <span class="nav-items"><a href="#contactMe">Contact</a></span>
+                <span class="envelope"><a href="#"><i class="fa-solid fa-envelope fa-xl"></i></a></span>              
             </nav>
         </header>
         <!-- end of header -->
@@ -86,7 +87,7 @@
         <!-- end of hero section -->
 
         <!-- my recent works -->
-        <section class="recent-works-section">
+        <section class="recent-works-section" id="portfolio">
             <div class="heading-section">
                 <h4 class="recent-heading">My Recent Works</h4>
                 <div class="line"></div>
@@ -199,7 +200,7 @@
         <!-- end of my my recent works -->
 
         <!-- about me -->
-        <section class="about-me">
+        <section class="about-me" id="aboutMe">
             <!-- content -->
             <div class="content-wrapper">
                 <div class="leftside">
@@ -264,7 +265,7 @@
         <footer class="footer-contact-icons">
 
             <!-- contact -->
-            <section class="contact-box">
+            <section class="contact-box" id="contactMe">
                 <h3 class="text">
                     I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
                 </h3>
@@ -297,5 +298,8 @@
 
     </main>
     <!-- end of wrapper -->
+
+    <!-- linking javascript -->
+    <script src="app.js"></script>
 </body>
 </html>
