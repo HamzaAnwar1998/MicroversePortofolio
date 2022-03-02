@@ -82,10 +82,10 @@ const projects = [
   {
     id: 2,
     name: 'Virtual Exhibition',
-    img: './images/simplex.PNG',
+    img: './images/loginScreen1.PNG',
     description: 'This is a Virtual Exhibition landing page with registeration and login form flow',
     liveLink: 'https://virtualexhibitionwithevents.web.app/',
-    github: 'not available',
+    github: '#',
     techstack: [
       { id: 1, tech: 'React' },
       { id: 2, tech: 'CSS' },
@@ -93,10 +93,10 @@ const projects = [
   },
   {
     id: 3,
-    name: 'Ecommerce App With React Hooks & Firebase',
-    img: './images/simplex.PNG',
+    name: 'React Firebase Ecommerce',
+    img: './images/filteringProducts.png',
     description: 'A Simple ecommerce store developed using React Hooks and Firebase',
-    liveLink: 'ecommerce-app-with-react-hooks.herokuapp.com',
+    liveLink: 'https://ecommerce-app-with-react-hooks.herokuapp.com/',
     github: 'https://github.com/HamzaAnwar1998/ecommerce-site-with-react-hooks-and-firebase',
     techstack: [
       { id: 1, tech: 'React' },
@@ -107,8 +107,8 @@ const projects = [
   },
   {
     id: 4,
-    name: 'Upload and View PDF Files in React App',
-    img: './images/simplex.PNG',
+    name: 'React PDF viewer',
+    img: './images/pdf.png',
     description: 'A Simple React App in which users can upload and view pdf files in browser',
     liveLink: 'https://youtu.be/v-PoG1X8jig',
     github: 'https://github.com/HamzaAnwar1998/Upload-View-Pdf-In-Reactjs',
@@ -117,11 +117,35 @@ const projects = [
       { id: 2, tech: 'PDF' },
     ],
   },
+  {
+    id: 5,
+    name: 'Fetch excel data in React',
+    img: './images/reactExcel.png',
+    description: 'A Simple React App in which users can upload and view excel files in browser',
+    liveLink: 'https://www.youtube.com/watch?v=N42gydeIoQA',
+    github: 'https://github.com/HamzaAnwar1998/Fetch-Excel-File-as-JSON-in-React',
+    techstack: [
+      { id: 1, tech: 'Hooks' },
+      { id: 2, tech: 'Sheetjs' },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Booklist App',
+    img: './images/booklist.png',
+    description: 'A Simple booklist app developed using react and Local Storage',
+    liveLink: 'https://www.youtube.com/watch?v=Mb-f3QfX2rU',
+    github: 'https://github.com/HamzaAnwar1998/LocalStorage-with-React-Hooks-BookList-App',
+    techstack: [
+      { id: 1, tech: 'Hooks' },
+      { id: 2, tech: 'LocalStorage' },
+    ],
+  },
 ];
 
 const gridContainer = document.getElementById('grid-container');
 document.getElementById('body').onload = () => {
-  projects.map((project) => {
+  projects.map((project, index) => {
     gridContainer.innerHTML += `
       <div class="grid-items pj">
         <div class="bg-img">
@@ -129,31 +153,223 @@ document.getElementById('body').onload = () => {
             <p>
                 ${project.description}
             </p>
-            <ul id="ul">
-                <li>HTML</li>
+            <ul>
+              <li>HTML</li>
+              <li>Bootstrap</li>
+              <li>Ruby</li>
             </ul>
-            <button onclick="openModal('${project}')">See Projects</button>
+            <button onclick="openModal(projects[${index}])">See Projects</button>
         </div>
       </div>
       `;
   });
 };
 
-// const ul = document.getElementById('ul');
-// projects.map((project) => {
-//   const technologies = project.techstack;
-//   technologies.forEach((technology) => {
-//     const li = document.createElement('li');
-//     li.textContent = technology.tech;
-//     if (ul !== null) {
-//       ul.appendChild(li);
-//     } else {
-//       console.log('ul is null');
-//     }
-//   });
-// });
-
 function openModal(project) {
-  const { id, name } = project;
-  console.log(id, name);
+  // modal container
+  const modalContainer = document.getElementById('modal-container');
+
+  // boxshadow child of modal container
+  const backshadow = document.createElement('div');
+  backshadow.className = 'backshadow';
+
+  // modal child of backshadow
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+
+  // headingDiv child of modal
+  const headingDiv = document.createElement('div');
+  headingDiv.className = 'heading-div';
+
+  // heading child of headingDiv
+  const heading = document.createElement('h3');
+  heading.className = 'modal-heading';
+  heading.textContent = project.name;
+  headingDiv.appendChild(heading);
+
+  // cross child of headingDiv
+  const cross = document.createElement('i');
+  cross.className = 'fa-solid fa-xmark fa-xl';
+  headingDiv.appendChild(cross);
+
+  // techstack UL and its 3 LI's child of modal
+  const techstack = document.createElement('ul');
+  techstack.className = 'modal-techstack';
+  const techHtml = document.createElement('li');
+  techHtml.className = 'li';
+  techHtml.textContent = 'HTML';
+  const techBootstrap = document.createElement('li');
+  techBootstrap.className = 'li';
+  techBootstrap.textContent = 'Bootstrap';
+  const techRuby = document.createElement('li');
+  techRuby.className = 'li';
+  techRuby.textContent = 'Ruby';
+  techstack.appendChild(techHtml);
+  techstack.appendChild(techBootstrap);
+  techstack.appendChild(techRuby);
+
+  // leftside and rightside container that is child of modal
+  const leftRightContainer = document.createElement('div');
+  leftRightContainer.className = 'left-and-right-container';
+
+  // leftside div (child of leftRightContainer) to append image
+  const leftside = document.createElement('div');
+  leftside.className = 'modal-leftside';
+  leftRightContainer.appendChild(leftside);
+
+  // creating a div that is child of leftside to append img
+  const imgDiv = document.createElement('div');
+  imgDiv.className = 'modal-img-div';
+  const projectImg = document.createElement('img');
+  projectImg.src = project.img;
+  imgDiv.appendChild(projectImg);
+  leftside.appendChild(imgDiv);
+
+  // rightside div (child of modal) will append p and btns div
+  const rightside = document.createElement('div');
+  rightside.className = 'modal-rightside';
+  leftRightContainer.appendChild(rightside);
+
+  // description child of rightside
+  const description = document.createElement('p');
+  description.textContent = project.description;
+  description.className = 'modal-description';
+  rightside.appendChild(description);
+
+  // buttons divs child of rightside to append live and github link
+  const buttonsDiv = document.createElement('div');
+  buttonsDiv.className = 'modals-btns-div';
+  const livelink = document.createElement('a');
+  livelink.href = project.liveLink;
+  livelink.className = 'a';
+  livelink.textContent = 'See Live';
+  livelink.target = 'blank';
+  buttonsDiv.appendChild(livelink);
+  const github = document.createElement('a');
+  github.href = project.github;
+  github.textContent = 'See Source';
+  github.className = 'a';
+  github.target = 'blank';
+  buttonsDiv.appendChild(github);
+  rightside.appendChild(buttonsDiv);
+
+  // modal appending its children
+  modal.appendChild(headingDiv);
+  modal.appendChild(techstack);
+  modal.appendChild(leftRightContainer);
+
+  // backshadow appending modal
+  backshadow.appendChild(modal);
+
+  // modal container appending backshadow
+  modalContainer.appendChild(backshadow);
+
+  // x click event listner
+  cross.addEventListener('click', () => {
+    backshadow.style.display = 'none';
+  });
+}
+
+// multi stories modal
+function multipostModal() {
+  // modal container
+  const modalContainer = document.getElementById('multi-stories-modal-container');
+
+  // boxshadow child of modal container
+  const backshadow = document.createElement('div');
+  backshadow.className = 'backshadow';
+
+  // modal child of backshadow
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+
+  // headingDiv child of modal
+  const headingDiv = document.createElement('div');
+  headingDiv.className = 'heading-div';
+
+  // heading child of headingDiv
+  const heading = document.createElement('h3');
+  heading.className = 'modal-heading';
+  heading.textContent = 'Multi Post Stories';
+  headingDiv.appendChild(heading);
+
+  // cross child of headingDiv
+  const cross = document.createElement('i');
+  cross.className = 'fa-solid fa-xmark fa-xl';
+  headingDiv.appendChild(cross);
+
+  // techstack UL and its 3 LI's child of modal
+  const techstack = document.createElement('ul');
+  techstack.className = 'modal-techstack';
+  const techHtml = document.createElement('li');
+  techHtml.className = 'li';
+  techHtml.textContent = 'HTML';
+  const techBootstrap = document.createElement('li');
+  techBootstrap.className = 'li';
+  techBootstrap.textContent = 'Bootstrap';
+  const techRuby = document.createElement('li');
+  techRuby.className = 'li';
+  techRuby.textContent = 'Ruby';
+  techstack.appendChild(techHtml);
+  techstack.appendChild(techBootstrap);
+  techstack.appendChild(techRuby);
+
+  // leftside and rightside container that is child of modal
+  const leftRightContainer = document.createElement('div');
+  leftRightContainer.className = 'left-and-right-container';
+
+  // leftside div (child of leftRightContainer) to append image
+  const leftside = document.createElement('div');
+  leftside.className = 'modal-leftside';
+  leftRightContainer.appendChild(leftside);
+
+  // creating a div that is child of leftside to append img
+  const imgDiv = document.createElement('div');
+  imgDiv.className = 'modal-img-div';
+  const projectImg = document.createElement('img');
+  projectImg.src = './images/ImgPlaceholder.png';
+  imgDiv.appendChild(projectImg);
+  leftside.appendChild(imgDiv);
+
+  // rightside div (child of modal) will append p and btns div
+  const rightside = document.createElement('div');
+  rightside.className = 'modal-rightside';
+  leftRightContainer.appendChild(rightside);
+
+  // description child of rightside
+  const description = document.createElement('p');
+  description.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.';
+  description.className = 'modal-description';
+  rightside.appendChild(description);
+
+  // buttons divs child of rightside to append live and github link
+  const buttonsDiv = document.createElement('div');
+  buttonsDiv.className = 'modals-btns-div';
+  const livelink = document.createElement('a');
+  livelink.href = '#';
+  livelink.className = 'a';
+  livelink.textContent = 'See Live';
+  buttonsDiv.appendChild(livelink);
+  const github = document.createElement('a');
+  github.href = '#';
+  github.className = 'a';
+  github.textContent = 'See Source';
+  buttonsDiv.appendChild(github);
+  rightside.appendChild(buttonsDiv);
+
+  // modal appending its children
+  modal.appendChild(headingDiv);
+  modal.appendChild(techstack);
+  modal.appendChild(leftRightContainer);
+
+  // backshadow appending modal
+  backshadow.appendChild(modal);
+
+  // modal container appending backshadow
+  modalContainer.appendChild(backshadow);
+
+  // x click event listner
+  cross.addEventListener('click', () => {
+    backshadow.style.display = 'none';
+  });
 }
