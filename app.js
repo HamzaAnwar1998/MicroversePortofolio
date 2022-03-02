@@ -145,7 +145,7 @@ const projects = [
 
 const gridContainer = document.getElementById('grid-container');
 document.getElementById('body').onload = () => {
-  projects.map((project, index) => {
+  projects.forEach((project, index) => {
     gridContainer.innerHTML += `
       <div class="grid-items pj">
         <div class="bg-img">
@@ -165,6 +165,7 @@ document.getElementById('body').onload = () => {
   });
 };
 
+/* eslint-disable no-unused-vars */
 function openModal(project) {
   // modal container
   const modalContainer = document.getElementById('modal-container');
@@ -373,3 +374,4 @@ function multipostModal() {
     backshadow.style.display = 'none';
   });
 }
+/* eslint-enable no-unused-vars */
