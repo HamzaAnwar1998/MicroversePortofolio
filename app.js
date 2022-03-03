@@ -65,7 +65,7 @@ navItems.forEach((navItem) => {
   });
 });
 
-// creating projects
+// creating projects (array of objects)
 const projects = [
   {
     id: 1,
@@ -142,7 +142,6 @@ const projects = [
     ],
   },
 ];
-
 const gridContainer = document.getElementById('grid-container');
 document.getElementById('body').onload = () => {
   projects.forEach((project, index) => {
@@ -375,3 +374,16 @@ function multipostModal() {
   });
 }
 /* eslint-enable no-unused-vars */
+
+// client side validation
+document.getElementById('form').addEventListener('submit', (e) => {
+  const emailValue = document.getElementById('email').value;
+  const emailError = document.getElementById('error-msg');
+  const regex = /^[a-z]/g;
+  if (regex.test(emailValue)) {
+    emailError.textContent = '';
+  } else {
+    e.preventDefault();
+    emailError.textContent = 'Email should be in lowercase';
+  }
+});
