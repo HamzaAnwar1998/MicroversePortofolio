@@ -19,7 +19,7 @@
     <!-- font aweosome -->
     <script src="https://kit.fontawesome.com/d7195d9855.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="body">
     <!-- wrapper -->
     <main class="wrapper" id='wrapper'>
 
@@ -92,7 +92,7 @@
                 <h4 class="recent-heading">My Recent Works</h4>
                 <div class="line"></div>
             </div>
-            <div class="grid-container">
+            <div class="grid-container" id="grid-container">
                 <div class="grid-items mp">
                     <div class="grid-bg-img">
                         
@@ -108,91 +108,7 @@
                             <li class="tech-stack-li">Bootstrap</li>
                             <li class="tech-stack-li">Ruby</li>
                         </ul>
-                        <button class="see-projects">See Projects</button>
-                    </div>
-                </div>
-                <div class="grid-items pj">
-                    <div class="bg-img">
-                        <h3>Profesional Art Printing Data</h3>
-                        <p>
-                            A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard
-                        </p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>Bootstrap</li>
-                            <li>Ruby</li>
-                        </ul>
-                        <button>See Projects</button>
-                    </div>
-                </div>
-                <div class="grid-items pj">
-                    <div class="bg-img">
-                        <h3>Profesional Art Printing Data</h3>
-                        <p>
-                            A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard
-                        </p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>Bootstrap</li>
-                            <li>Ruby</li>
-                        </ul>
-                        <button>See Projects</button>
-                    </div>
-                </div>
-                <div class="grid-items pj">
-                    <div class="bg-img">
-                        <h3>Profesional Art Printing Data</h3>
-                        <p>
-                            A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard
-                        </p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>Bootstrap</li>
-                            <li>Ruby</li>
-                        </ul>
-                        <button>See Projects</button>
-                    </div>
-                </div>
-                <div class="grid-items pj">
-                    <div class="bg-img">
-                        <h3>Profesional Art Printing Data</h3>
-                        <p>
-                            A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard
-                        </p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>Bootstrap</li>
-                            <li>Ruby</li>
-                        </ul>
-                        <button>See Projects</button>
-                    </div>
-                </div>
-                <div class="grid-items pj">
-                    <div class="bg-img">
-                        <h3>Profesional Art Printing Data</h3>
-                        <p>
-                            A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard
-                        </p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>Bootstrap</li>
-                            <li>Ruby</li>
-                        </ul>
-                        <button>See Projects</button>
-                    </div>
-                </div>
-                <div class="grid-items pj">
-                    <div class="bg-img">
-                        <h3>Profesional Art Printing Data</h3>
-                        <p>
-                            A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard
-                        </p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>Bootstrap</li>
-                            <li>Ruby</li>
-                        </ul>
-                        <button>See Projects</button>
+                        <button type="button" class="see-projects" onclick="multipostModal()">See Projects</button>
                     </div>
                 </div>
             </div>
@@ -298,6 +214,18 @@
 
     </main>
     <!-- end of wrapper -->
+
+    <!-- modal box -->
+    <div id="modal-container">
+        
+    </div>
+    <!-- end of modal box -->
+
+    <!-- modal box multi stories -->
+    <div id="multi-stories-modal-container">
+        
+    </div>
+    <!-- end of modal box multi stories -->
 
     <!-- linking javascript -->
     <script src="app.js"></script>
