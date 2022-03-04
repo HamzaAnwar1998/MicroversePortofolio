@@ -394,6 +394,9 @@ const formData = {
   email: '',
   message: '',
 };
+if(localStorage.getItem('formData') !== null) {
+  formData = JSON.parse(locatStorage.getItem('formData'));
+}
 
 // saving data to local storage
 
@@ -409,3 +412,4 @@ formElements.forEach((element) => {
     localStorage.setItem('formData', JSON.stringify(formData));
   });
 });
+
