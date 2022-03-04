@@ -375,15 +375,46 @@ function multipostModal() {
 }
 /* eslint-enable no-unused-vars */
 
-// client side validation
+// client side validation and local storage stuff
 document.getElementById('form').addEventListener('submit', (e) => {
   const emailValue = document.getElementById('email').value;
   const emailError = document.getElementById('error-msg');
   const regex = /^[a-z]/g;
   if (regex.test(emailValue)) {
     emailError.textContent = '';
+    // emptying the local storage
+    localStorage.removeItem('formData');
   } else {
     e.preventDefault();
     emailError.textContent = 'Email should be in lowercase';
   }
+});
+
+// formData object
+let formData = {
+  full_name: '',
+  email: '',
+  message: '',
+};
+// retrieving the local storage
+if (localStorage.getItem('formData') !== null) {
+  const data = localStorage.getItem('formData');
+  formData = JSON.parse(data);
+}
+
+// saving data to local storage
+
+// getting form input fields and textarea
+const formElements = document.querySelectorAll('input, textarea');
+// looping through the elements
+formElements.forEach((element) => {
+  // displaying the formData values to input fields
+  element.value = formData[element.name];
+  // applying input event listener on elements
+  element.addEventListener('input', (e) => {
+    // setting the values of input fields to the respective keys in object
+    formData[e.target.name] = e.target.value;
+    // saving the data in local storage
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
 });
