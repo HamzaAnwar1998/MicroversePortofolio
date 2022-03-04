@@ -387,3 +387,25 @@ document.getElementById('form').addEventListener('submit', (e) => {
     emailError.textContent = 'Email should be in lowercase';
   }
 });
+
+// formData object
+const formData = {
+  full_name: '',
+  email: '',
+  message: '',
+};
+
+// saving data to local storage
+
+// getting form input fields and textarea
+const formElements = document.querySelectorAll('input, textarea');
+// looping through the elements
+formElements.forEach((element) => {
+  // applying input event listener on elements
+  element.addEventListener('input', (e) => {
+    // setting the values of input fields to the respective keys in object
+    formData[e.target.name] = e.target.value;
+    // saving the data in local storage
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+});
